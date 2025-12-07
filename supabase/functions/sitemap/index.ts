@@ -9,6 +9,7 @@ const SITE_URL = 'https://isaquesestudios.com'
 
 const staticPages = [
   { loc: '/', priority: '1.0', changefreq: 'weekly' },
+  { loc: '/servicos', priority: '0.9', changefreq: 'monthly' },
   { loc: '/paineis-de-led', priority: '0.9', changefreq: 'monthly' },
   { loc: '/letreiros', priority: '0.9', changefreq: 'monthly' },
   { loc: '/totens', priority: '0.9', changefreq: 'monthly' },

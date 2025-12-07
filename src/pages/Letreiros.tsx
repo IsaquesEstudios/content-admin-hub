@@ -1,6 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Store, Fuel, Church, Utensils, Building } from "lucide-react";
+import { ArrowRight, Store, Fuel, Church, Utensils, Building, Palette, Zap, Clock } from "lucide-react";
+import { FAQ } from "@/components/sections/FAQ";
+import { AboutCompany } from "@/components/sections/AboutCompany";
 import ledSignImage from "@/assets/led-sign.jpg";
 
 const useCases = [
@@ -9,6 +11,39 @@ const useCases = [
   { icon: Church, title: "Igrejas e Templos", description: "Horários de cultos, versículos bíblicos, agenda de eventos." },
   { icon: Utensils, title: "Bares e Restaurantes", description: "Prato do dia, atrações musicais, Happy Hour e telefones." },
   { icon: Building, title: "Recepções Internas", description: "Guichês de atendimento, avisos de segurança, chamadas de senha." },
+];
+
+const types = [
+  {
+    icon: Palette,
+    title: "Letreiro Digital RGB",
+    description: "Texto colorido com animações e efeitos. Ideal para mensagens dinâmicas e promoções.",
+  },
+  {
+    icon: Zap,
+    title: "Letreiro Monocromático",
+    description: "Texto em cor única (vermelho, verde, âmbar). Econômico e de alta visibilidade.",
+  },
+  {
+    icon: Clock,
+    title: "Letreiro com Hora/Temperatura",
+    description: "Exibe informações úteis além das suas mensagens. Muito usado em farmácias e postos.",
+  },
+];
+
+const faqItems = [
+  {
+    question: "Como faço para trocar as mensagens do letreiro?",
+    answer: "Nossos letreiros acompanham software de controle simples e intuitivo. Você pode programar as mensagens via computador (cabo USB ou rede) ou até mesmo pelo celular em modelos com WiFi. Oferecemos treinamento completo na instalação.",
+  },
+  {
+    question: "O letreiro funciona em dias de chuva?",
+    answer: "Sim! Nossos letreiros para uso externo possuem proteção IP65, sendo resistentes à água, poeira e variações de temperatura. São projetados para funcionar 24 horas por dia em qualquer condição climática.",
+  },
+  {
+    question: "Qual o tamanho ideal do letreiro para minha fachada?",
+    answer: "O tamanho depende da distância de leitura desejada. Para leitura a 20 metros, recomendamos caracteres de pelo menos 15cm. Fazemos uma visita técnica gratuita para indicar o tamanho ideal para sua aplicação.",
+  },
 ];
 
 export default function Letreiros() {
@@ -50,27 +85,53 @@ export default function Letreiros() {
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
               Letreiro de <span className="text-gradient">alta qualidade</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg mb-4">
               Sabemos que um painel de LED é um investimento importante para o seu negócio. 
               Por isso, fugimos de componentes genéricos de baixa qualidade. Nossos produtos são 
-              projetados para suportar o uso contínuo e as variações climáticas, garantindo que 
-              sua marca brilhe com a mesma intensidade no primeiro e no milésimo dia de uso.
+              projetados para suportar o uso contínuo e as variações climáticas.
+            </p>
+            <p className="text-muted-foreground text-lg">
+              Garantimos que sua marca brilhe com a mesma intensidade no primeiro e no milésimo dia de uso. 
+              Utilizamos LEDs de alta luminosidade, placas controladoras de qualidade e estruturas 
+              em alumínio ou aço galvanizado para máxima durabilidade.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Use Cases */}
+      {/* Types */}
       <section className="section-padding">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Tipos de <span className="text-gradient">Letreiros</span>
+            </h2>
+            <p className="text-muted-foreground">Escolha o modelo ideal para sua aplicação</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {types.map((type) => (
+              <div key={type.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all text-center">
+                <type.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="font-heading font-bold text-lg mb-2">{type.title}</h3>
+                <p className="text-muted-foreground text-sm">{type.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="section-padding bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
               Onde utilizar <span className="text-gradient">letreiros?</span>
             </h2>
+            <p className="text-muted-foreground">Letreiros digitais são versáteis e se adaptam a diversos segmentos</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((item) => (
-              <div key={item.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all">
+              <div key={item.title} className="p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all">
                 <item.icon className="w-10 h-10 text-primary mb-4" />
                 <h3 className="font-heading font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -80,8 +141,14 @@ export default function Letreiros() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <FAQ items={faqItems} subtitle="Tire suas dúvidas sobre letreiros em LED" />
+
+      {/* About Company */}
+      <AboutCompany />
+
       {/* CTA */}
-      <section className="section-padding bg-card">
+      <section className="section-padding">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
             Letreiro em LED para <span className="text-gradient">sua região</span>

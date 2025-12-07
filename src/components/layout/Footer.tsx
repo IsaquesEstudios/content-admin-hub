@@ -8,6 +8,7 @@ import {
   Linkedin,
   MessageCircle
 } from "lucide-react";
+import logoEclipse from "@/assets/logo-eclipse.webp";
 
 const services = [
   { name: "Painéis de LED", href: "/paineis-de-led" },
@@ -20,6 +21,7 @@ const services = [
 
 const links = [
   { name: "Início", href: "/" },
+  { name: "Serviços", href: "/servicos" },
   { name: "Blog", href: "/blog" },
   { name: "Contato", href: "/#contato" },
 ];
@@ -32,12 +34,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <span className="text-2xl font-heading font-bold text-gradient">
-                eclipse
-              </span>
-              <span className="text-xs font-medium text-muted-foreground block -mt-1">
-                Soluções Visuais
-              </span>
+              <img
+                src={logoEclipse}
+                alt="Eclipse Soluções Visuais"
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Empresa especializada em comunicação visual de alto impacto. 
