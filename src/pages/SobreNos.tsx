@@ -241,9 +241,12 @@ export default function SobreNos() {
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
               Onde <span className="text-gradient">Estamos</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Com sede em <strong className="text-foreground">Santa Catarina</strong>, atendemos 
+            <p className="text-muted-foreground text-lg mb-4">
+              Com sede em <strong className="text-foreground">Capivari de Baixo, Santa Catarina</strong>, atendemos 
               clientes em toda a região e estamos prontos para levar a sua comunicação visual a um novo patamar.
+            </p>
+            <p className="text-muted-foreground mb-8">
+              R. Pedro Venâncio Martins, 168 - Capivari de Baixo/SC, 88745-000
             </p>
             <p className="text-xl font-heading font-medium text-primary italic">
               Sua marca merece brilhar. Deixe a Eclipse Visual cuidar disso.

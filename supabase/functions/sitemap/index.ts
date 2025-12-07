@@ -5,7 +5,7 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
-const SITE_URL = 'https://isaquesestudios.com'
+const SITE_URL = 'https://eclipseled.com.br'
 
 const staticPages = [
   { loc: '/', priority: '1.0', changefreq: 'weekly' },

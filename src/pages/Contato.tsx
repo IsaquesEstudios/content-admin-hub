@@ -216,7 +216,7 @@ export default function Contato() {
               </h2>
               <div className="rounded-2xl overflow-hidden border border-border shadow-card">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.0!2d-43.39!3d-22.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU3JzAwLjAiUyA0M8KwMjMnMjQuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.0!2d-48.8!3d-28.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95210a4a9e0b0e0d%3A0x0!2sR.%20Pedro%20Ven%C3%A2ncio%20Martins%2C%20168%20-%20Capivari%20de%20Baixo%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                   width="100%"
                   height="400"
                   style={{ border: 0 }}
@@ -232,8 +232,8 @@ export default function Contato() {
                   <div>
                     <h3 className="font-heading font-semibold mb-1">Endereço</h3>
                     <p className="text-muted-foreground">
-                      Rua Creso, 350<br />
-                      Jacarepaguá - RJ
+                      R. Pedro Venâncio Martins, 168<br />
+                      Capivari de Baixo/SC, 88745-000
                     </p>
                   </div>
                 </div>
