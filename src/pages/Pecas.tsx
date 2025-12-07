@@ -1,6 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Cpu, Zap, Cable, Grid3X3, CheckCircle, HelpCircle } from "lucide-react";
+import { ArrowRight, Cpu, Zap, Cable, Grid3X3, CheckCircle, Truck, ShieldCheck, Headphones } from "lucide-react";
+import { FAQ } from "@/components/sections/FAQ";
+import { AboutCompany } from "@/components/sections/AboutCompany";
 import ledPartsImage from "@/assets/led-parts.jpg";
 
 const categories = [
@@ -31,9 +33,35 @@ const categories = [
 ];
 
 const benefits = [
-  { icon: CheckCircle, title: "Consultoria de Compatibilidade", description: "Envie a foto do modelo antigo e indicamos a peça compatível." },
-  { icon: CheckCircle, title: "Agilidade na Entrega", description: "Retirada rápida ou envio expresso para SC." },
-  { icon: CheckCircle, title: "Produtos Testados", description: "As mesmas peças que usamos em nossas manutenções." },
+  { icon: Headphones, title: "Consultoria de Compatibilidade", description: "Envie a foto do modelo antigo e indicamos a peça compatível. Evite comprar errado." },
+  { icon: Truck, title: "Agilidade na Entrega", description: "Retirada rápida em Florianópolis ou envio expresso para toda Santa Catarina." },
+  { icon: ShieldCheck, title: "Produtos Testados", description: "As mesmas peças que usamos em nossas manutenções. Qualidade garantida." },
+];
+
+const popularParts = [
+  "Módulos P10 Outdoor",
+  "Módulos P3.9 Indoor",
+  "Receiving Card Nova A5s Plus",
+  "Receiving Card Linsn RV908",
+  "Fonte Meanwell 5V 40A",
+  "Fonte Chuanglian 5V 60A",
+  "Sending Card Nova MSD300",
+  "Cabo Flat 16 vias",
+];
+
+const faqItems = [
+  {
+    question: "Como sei qual peça é compatível com meu painel?",
+    answer: "Envie fotos da peça antiga pelo WhatsApp. Nossa equipe técnica identificará o modelo e indicará a peça correta. Também precisamos saber a marca e modelo do seu painel, se possível.",
+  },
+  {
+    question: "Vocês entregam para fora de Santa Catarina?",
+    answer: "Sim! Enviamos para todo o Brasil via Sedex ou transportadora. O prazo e custo de frete são calculados no momento do pedido. Para SC, oferecemos entrega expressa.",
+  },
+  {
+    question: "As peças têm garantia?",
+    answer: "Sim, todas as peças possuem garantia de 3 a 12 meses conforme o fabricante. Guardamos registro de todas as vendas para facilitar eventual troca ou suporte.",
+  },
 ];
 
 export default function Pecas() {
@@ -68,9 +96,38 @@ export default function Pecas() {
         </div>
       </section>
 
+      {/* Popular Parts */}
+      <section className="section-padding bg-card">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+                Peças mais <span className="text-gradient">procuradas</span>
+              </h2>
+              <p className="text-muted-foreground">Mantemos em estoque os itens de maior demanda</p>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {popularParts.map((part) => (
+                <span
+                  key={part}
+                  className="px-4 py-2 rounded-full bg-background border border-border text-sm hover:border-primary/50 transition-colors"
+                >
+                  {part}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Categories */}
       <section className="section-padding">
         <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Categorias de <span className="text-gradient">Peças</span>
+            </h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-8">
             {categories.map((category) => (
               <div key={category.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all">
@@ -112,34 +169,13 @@ export default function Pecas() {
       </section>
 
       {/* FAQ */}
-      <section className="section-padding">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                Dúvida sobre qual <span className="text-gradient">peça escolher?</span>
-              </h2>
-            </div>
-            <div className="p-6 rounded-2xl bg-card border border-border flex items-start gap-4">
-              <HelpCircle className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-              <div>
-                <p className="text-muted-foreground">
-                  Não sabe qual a Receiving Card certa para o seu painel? Envie a foto do modelo 
-                  antigo e nós indicamos a peça compatível. Evite comprar errado.
-                </p>
-                <Button variant="default" className="mt-4" asChild>
-                  <a href="https://wa.me/5548999999999" target="_blank">
-                    Falar com Especialista
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FAQ items={faqItems} subtitle="Tire suas dúvidas sobre peças para painéis" />
+
+      {/* About Company */}
+      <AboutCompany />
 
       {/* CTA */}
-      <section className="section-padding bg-card">
+      <section className="section-padding">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
             Peças com entrega rápida em <span className="text-gradient">Santa Catarina</span>

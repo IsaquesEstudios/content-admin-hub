@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, Sun, Moon, Building, Church, GalleryVertical, Presentation } from "lucide-react";
+import { ArrowRight, CheckCircle, Sun, Moon, Building, Church, GalleryVertical, Presentation, Zap, Eye, RefreshCcw } from "lucide-react";
+import { FAQ } from "@/components/sections/FAQ";
+import { AboutCompany } from "@/components/sections/AboutCompany";
 import heroImage from "@/assets/hero-led-panel.jpg";
 import ledPanelImage from "@/assets/led-panel-indoor.jpg";
 
@@ -54,6 +56,43 @@ const benefits = [
   "Suporte técnico local",
 ];
 
+const advantages = [
+  {
+    icon: Eye,
+    title: "Visibilidade 24 horas",
+    description: "Diferente de lonas e banners, painéis de LED são visíveis dia e noite, garantindo que sua mensagem alcance o público em qualquer horário.",
+  },
+  {
+    icon: RefreshCcw,
+    title: "Conteúdo dinâmico",
+    description: "Atualize suas promoções, preços e mensagens instantaneamente, sem custos de impressão ou instalação.",
+  },
+  {
+    icon: Zap,
+    title: "Alto impacto visual",
+    description: "Cores vibrantes e movimento capturam a atenção de forma muito mais efetiva que mídias estáticas.",
+  },
+];
+
+const faqItems = [
+  {
+    question: "Qual a diferença entre painel indoor e outdoor?",
+    answer: "Painéis outdoor possuem maior brilho (acima de 5.000 nits) e proteção IP65/IP66 contra água e poeira, sendo ideais para uso externo. Já os painéis indoor têm pixels menores (maior resolução) e são projetados para ambientes internos onde a distância de visualização é menor.",
+  },
+  {
+    question: "Quanto tempo dura um painel de LED?",
+    answer: "Um painel de LED de qualidade tem vida útil média de 100.000 horas de funcionamento, o que equivale a mais de 10 anos de uso contínuo. Com manutenção preventiva adequada, essa durabilidade pode ser ainda maior.",
+  },
+  {
+    question: "Como é feita a instalação do painel?",
+    answer: "Nossa equipe realiza todo o processo: visita técnica para avaliar o local, projeto da estrutura de suporte, instalação elétrica adequada, montagem do painel e configuração do sistema de controle. Também oferecemos treinamento para operação.",
+  },
+  {
+    question: "Posso atualizar o conteúdo do painel remotamente?",
+    answer: "Sim! Todos os nossos painéis podem ser configurados para atualização remota via internet. Você pode alterar vídeos, imagens e textos de qualquer lugar usando um computador ou smartphone.",
+  },
+];
+
 export default function PaineisLed() {
   return (
     <Layout>
@@ -94,9 +133,15 @@ export default function PaineisLed() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                 Por que investir em um <span className="text-gradient">Painel de LED?</span>
               </h2>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-6">
                 A comunicação estática ficou no passado. Em um mundo onde a atenção das pessoas 
                 é disputada a cada segundo, sua empresa precisa de movimento e brilho.
+              </p>
+              <p className="text-muted-foreground mb-8">
+                Painéis de LED são a evolução dos outdoors tradicionais. Enquanto uma lona 
+                precisa ser reimpressa a cada campanha, um painel digital permite trocar o 
+                conteúdo instantaneamente, exibir vídeos e até mesmo programar diferentes 
+                mensagens ao longo do dia.
               </p>
               <ul className="grid grid-cols-2 gap-4">
                 {benefits.map((benefit) => (
@@ -114,17 +159,44 @@ export default function PaineisLed() {
         </div>
       </section>
 
-      {/* Types */}
+      {/* Advantages */}
       <section className="section-padding">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+              Vantagens do <span className="text-gradient">Painel de LED</span>
+            </h2>
+            <p className="text-muted-foreground">
+              Descubra por que cada vez mais empresas estão migrando para a comunicação digital.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {advantages.map((advantage) => (
+              <div key={advantage.title} className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all hover-glow text-center">
+                <advantage.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-heading font-bold mb-3">{advantage.title}</h3>
+                <p className="text-muted-foreground">{advantage.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Types */}
+      <section className="section-padding bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
               Escolha o painel <span className="text-gradient">ideal</span>
             </h2>
+            <p className="text-muted-foreground">
+              Oferecemos painéis para ambientes internos e externos, com diferentes resoluções 
+              para atender às necessidades do seu projeto.
+            </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {specifications.map((spec) => (
-              <div key={spec.type} className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all hover-glow">
+              <div key={spec.type} className="p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all hover-glow">
                 <spec.icon className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-2xl font-heading font-bold mb-2">Painel de LED {spec.type}</h3>
                 <p className="text-muted-foreground mb-4">{spec.description}</p>
@@ -142,7 +214,7 @@ export default function PaineisLed() {
       </section>
 
       {/* Use Cases */}
-      <section className="section-padding bg-card">
+      <section className="section-padding">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
@@ -151,7 +223,7 @@ export default function PaineisLed() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase) => (
-              <div key={useCase.title} className="p-6 rounded-2xl bg-background border border-border text-center hover:border-primary/50 transition-all">
+              <div key={useCase.title} className="p-6 rounded-2xl bg-card border border-border text-center hover:border-primary/50 transition-all">
                 <useCase.icon className="w-10 h-10 text-primary mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">{useCase.title}</h3>
                 <p className="text-muted-foreground text-sm">{useCase.description}</p>
@@ -160,6 +232,12 @@ export default function PaineisLed() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FAQ items={faqItems} subtitle="Tire suas dúvidas sobre painéis de LED" />
+
+      {/* About Company */}
+      <AboutCompany />
 
       {/* CTA */}
       <section className="section-padding">

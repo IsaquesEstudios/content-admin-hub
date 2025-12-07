@@ -1,25 +1,46 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Wrench, Settings, Zap, Cable, Cpu, CheckCircle } from "lucide-react";
+import { ArrowRight, Wrench, Settings, Zap, Cable, Cpu, CheckCircle, Clock, Shield, MapPin } from "lucide-react";
+import { FAQ } from "@/components/sections/FAQ";
+import { AboutCompany } from "@/components/sections/AboutCompany";
 import ledMaintenanceImage from "@/assets/led-maintenance.jpg";
 
 const services = [
-  { icon: Cpu, title: "Troca de Módulos", description: "Substituição de placas com LEDs queimados ou falhas de cor." },
-  { icon: Zap, title: "Fontes de Alimentação", description: "Diagnóstico e troca de fontes queimadas (110v/220v)." },
-  { icon: Cable, title: "Cabeamento", description: "Substituição de cabos Flat e cabos de rede oxidados." },
-  { icon: Settings, title: "Receiving Cards", description: "Substituição e atualização de placas receptoras." },
+  { icon: Cpu, title: "Troca de Módulos", description: "Substituição de placas com LEDs queimados ou falhas de cor. Temos módulos em estoque para agilizar o reparo." },
+  { icon: Zap, title: "Fontes de Alimentação", description: "Diagnóstico e troca de fontes queimadas (110v/220v). Utilizamos fontes de alta qualidade com garantia." },
+  { icon: Cable, title: "Cabeamento", description: "Substituição de cabos Flat e cabos de rede oxidados. Organização e identificação de toda a fiação." },
+  { icon: Settings, title: "Receiving Cards", description: "Substituição e atualização de placas receptoras. Reconfiguração de parâmetros e calibração de cores." },
 ];
 
 const preventive = [
   "Limpeza interna e externa dos gabinetes",
   "Reaperto de parafusos e verificação da estrutura",
   "Medição de tensão elétrica e verificação de aterramento",
+  "Verificação de cabos e conexões",
+  "Teste de temperatura dos componentes",
+  "Backup das configurações do sistema",
 ];
 
 const benefits = [
-  { icon: CheckCircle, title: "Diagnóstico Preciso", description: "Identificamos a raiz do problema para gerar economia." },
-  { icon: CheckCircle, title: "Atendimento Local", description: "Estamos em Santa Catarina (DDD 48). Nada de esperar dias." },
-  { icon: CheckCircle, title: "Treinamento Operacional", description: "Ensinamos sua equipe a operar corretamente." },
+  { icon: CheckCircle, title: "Diagnóstico Preciso", description: "Identificamos a raiz do problema para gerar economia. Não trocamos peças desnecessariamente." },
+  { icon: MapPin, title: "Atendimento Local", description: "Estamos em Santa Catarina (DDD 48). Nada de esperar dias por técnicos de outros estados." },
+  { icon: Clock, title: "Resposta Rápida", description: "Atendimento de urgência para painéis críticos. Seu negócio não pode ficar no escuro." },
+  { icon: Shield, title: "Garantia no Serviço", description: "Todos os serviços possuem garantia. Se o problema persistir, voltamos sem custo adicional." },
+];
+
+const faqItems = [
+  {
+    question: "Vocês fazem manutenção em painéis de outras marcas?",
+    answer: "Sim! Atendemos painéis de qualquer fabricante. Trabalhamos com as principais marcas de controladoras (Novastar, Linsn, Huidu, Colorlight) e temos peças compatíveis em estoque.",
+  },
+  {
+    question: "Como funciona o atendimento de urgência?",
+    answer: "Entre em contato pelo WhatsApp descrevendo o problema. Avaliamos a urgência e, se necessário, deslocamos um técnico no mesmo dia. O atendimento emergencial tem taxa adicional de deslocamento.",
+  },
+  {
+    question: "Qual o custo de uma manutenção?",
+    answer: "O custo varia conforme o tipo de serviço necessário. Fazemos um diagnóstico inicial e informamos o valor antes de qualquer reparo. Visitas técnicas em Florianópolis e região são gratuitas.",
+  },
 ];
 
 export default function Manutencao() {
@@ -61,10 +82,14 @@ export default function Manutencao() {
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
               Não deixe seu painel <span className="text-gradient">no escuro</span>
             </h2>
+            <p className="text-muted-foreground text-lg mb-4">
+              Sabemos que um painel de LED desligado é prejuízo. Cada dia sem funcionar significa 
+              perda de visibilidade, clientes e receita. Por isso, nossa equipe está pronta para 
+              diagnosticar e resolver com agilidade.
+            </p>
             <p className="text-muted-foreground text-lg">
-              Sabemos que um painel de LED desligado é prejuízo. Nossa equipe está pronta para 
-              diagnosticar e resolver com agilidade. Atendemos Igrejas, Postos de Combustível, 
-              Comércios e Eventos, mesmo que o equipamento não tenha sido comprado conosco.
+              Atendemos Igrejas, Postos de Combustível, Comércios e Eventos, mesmo que o equipamento 
+              não tenha sido comprado conosco. Nosso foco é manter seu painel funcionando.
             </p>
           </div>
         </div>
@@ -99,16 +124,16 @@ export default function Manutencao() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                 Manutenção <span className="text-gradient">Preventiva</span>
               </h2>
-              <p className="text-muted-foreground">Aumente a vida útil do seu equipamento</p>
+              <p className="text-muted-foreground">Aumente a vida útil do seu equipamento e evite paradas inesperadas</p>
             </div>
-            <ul className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {preventive.map((item) => (
-                <li key={item} className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border">
+                <div key={item} className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                   <span>{item}</span>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -121,7 +146,7 @@ export default function Manutencao() {
               Por que contratar a <span className="text-gradient">Eclipse?</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="p-6 rounded-2xl bg-card border border-border text-center">
                 <benefit.icon className="w-10 h-10 text-primary mx-auto mb-4" />
@@ -133,8 +158,14 @@ export default function Manutencao() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <FAQ items={faqItems} subtitle="Tire suas dúvidas sobre manutenção de painéis" />
+
+      {/* About Company */}
+      <AboutCompany />
+
       {/* CTA */}
-      <section className="section-padding bg-card">
+      <section className="section-padding">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
             Manutenção de LEDs em <span className="text-gradient">Santa Catarina</span>
