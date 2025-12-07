@@ -22,8 +22,9 @@ const services = [
 const links = [
   { name: "Início", href: "/" },
   { name: "Serviços", href: "/servicos" },
+  { name: "Sobre Nós", href: "/sobre" },
   { name: "Blog", href: "/blog" },
-  { name: "Contato", href: "/#contato" },
+  { name: "Contato", href: "/contato" },
 ];
 
 export function Footer() {

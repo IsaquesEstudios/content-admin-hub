@@ -17,7 +17,9 @@ const serviceLinks = [
 const navigation = [
   { name: "Início", href: "/" },
   { name: "Serviços", href: "/servicos", hasDropdown: true },
+  { name: "Sobre Nós", href: "/sobre" },
   { name: "Blog", href: "/blog" },
+  { name: "Contato", href: "/contato" },
 ];
 
 export function Header() {

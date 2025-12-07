@@ -12,6 +12,8 @@ import Totens from "./pages/Totens";
 import Estruturas from "./pages/Estruturas";
 import Manutencao from "./pages/Manutencao";
 import Pecas from "./pages/Pecas";
+import SobreNos from "./pages/SobreNos";
+import Contato from "./pages/Contato";
 import Blog from "./pages/Blog";
 import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/admin/Dashboard";
@@ -38,6 +40,8 @@ const App = () => (
             <Route path="/estruturas" element={<Estruturas />} />
             <Route path="/manutencao" element={<Manutencao />} />
             <Route path="/pecas" element={<Pecas />} />
+            <Route path="/sobre" element={<SobreNos />} />
+            <Route path="/contato" element={<Contato />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/auth" element={<Auth />} />
