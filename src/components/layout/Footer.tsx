@@ -4,8 +4,7 @@ import {
   Mail, 
   MapPin, 
   Facebook, 
-  Instagram, 
-  Linkedin,
+  Instagram,
   MessageCircle
 } from "lucide-react";
 import logoEclipse from "@/assets/logo-eclipse.webp";
@@ -25,6 +24,11 @@ const links = [
   { name: "Sobre Nós", href: "/sobre" },
   { name: "Blog", href: "/blog" },
   { name: "Contato", href: "/contato" },
+];
+
+const legalLinks = [
+  { name: "Política de Privacidade", href: "/politica-de-privacidade" },
+  { name: "Termos de Uso", href: "/termos-de-uso" },
 ];
 
 export function Footer() {
@@ -47,25 +51,22 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/p/Eclipse-Solu%C3%A7%C3%B5es-Visuais-100064940701741/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/eclipsevisuais/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -96,6 +97,21 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {links.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.href}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="font-heading font-semibold text-foreground mt-6 mb-3 text-sm">
+              Legal
+            </h4>
+            <ul className="space-y-3">
+              {legalLinks.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
@@ -143,7 +159,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
-                <span>Florianópolis, Santa Catarina</span>
+                <span>R. Pedro Venâncio Martins, 168<br />Capivari de Baixo/SC, 88745-000</span>
               </li>
             </ul>
           </div>
@@ -153,14 +169,8 @@ export function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-border">
         <div className="container mx-auto px-4 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-muted-foreground">
             <p>© 2024 Eclipse Soluções Visuais. Todos os direitos reservados.</p>
-            <p>
-              Desenvolvido por{" "}
-              <a href="#" className="text-primary hover:underline">
-                Eclipse LED
-              </a>
-            </p>
           </div>
         </div>
       </div>
