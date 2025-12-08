@@ -132,29 +132,29 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="https://wa.me/5548999999999"
+                  href="https://wa.me/5548984180377"
                   className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors text-sm group"
                 >
                   <MessageCircle className="w-5 h-5 mt-0.5 text-primary" />
-                  <span>(48) 9 9999-9999</span>
+                  <span>(48) 98418-0377</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+5548999999999"
+                  href="tel:+5548984180377"
                   className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   <Phone className="w-5 h-5 mt-0.5 text-primary" />
-                  <span>(48) 9999-9999</span>
+                  <span>(48) 98418-0377</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@eclipseled.com.br"
+                  href="mailto:matteus.isaque28@gmail.com"
                   className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   <Mail className="w-5 h-5 mt-0.5 text-primary" />
-                  <span>contato@eclipseled.com.br</span>
+                  <span>matteus.isaque28@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
