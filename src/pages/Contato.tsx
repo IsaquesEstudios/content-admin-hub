@@ -32,8 +32,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "E-mail",
-    value: "matteus.isaque28@gmail.com",
-    href: "mailto:matteus.isaque28@gmail.com",
+    value: "contato@eclipseled.com.br",
+    href: "mailto:contato@eclipseled.com.br",
     description: "Respondemos em até 24h",
   },
   {
