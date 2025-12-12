@@ -78,8 +78,8 @@ const stats = [
     label: "Projetos Realizados",
   },
   {
-    value: "10+",
-    label: "Anos de Experiência",
+    value: "1993",
+    label: "Trabalhando desde",
   },
   {
     value: "100%",
