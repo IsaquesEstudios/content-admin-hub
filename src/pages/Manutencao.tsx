@@ -107,7 +107,7 @@ export default function Manutencao() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
               <div key={service.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all text-center">
-                <service.icon className="w-10 h-10 text-primary mx-auto mb-4" />
+                <service.icon className="w-10 h-10 text-eclipse-blue mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">{service.title}</h3>
                 <p className="text-muted-foreground text-sm">{service.description}</p>
               </div>
@@ -129,7 +129,7 @@ export default function Manutencao() {
             <div className="grid md:grid-cols-2 gap-4">
               {preventive.map((item) => (
                 <div key={item} className="flex items-center gap-3 p-4 rounded-xl bg-background border border-border">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-eclipse-blue flex-shrink-0" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -149,7 +149,7 @@ export default function Manutencao() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="p-6 rounded-2xl bg-card border border-border text-center">
-                <benefit.icon className="w-10 h-10 text-primary mx-auto mb-4" />
+                <benefit.icon className="w-10 h-10 text-eclipse-blue mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground text-sm">{benefit.description}</p>
               </div>

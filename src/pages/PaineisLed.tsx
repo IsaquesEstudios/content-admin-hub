@@ -146,7 +146,7 @@ export default function PaineisLed() {
               <ul className="grid grid-cols-2 gap-4">
                 {benefits.map((benefit) => (
                   <li key={benefit} className="flex items-center gap-2 text-sm">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-eclipse-blue flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
                 ))}
@@ -173,7 +173,7 @@ export default function PaineisLed() {
           <div className="grid md:grid-cols-3 gap-8">
             {advantages.map((advantage) => (
               <div key={advantage.title} className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all hover-glow text-center">
-                <advantage.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                <advantage.icon className="w-12 h-12 text-eclipse-blue mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-bold mb-3">{advantage.title}</h3>
                 <p className="text-muted-foreground">{advantage.description}</p>
               </div>
@@ -197,7 +197,7 @@ export default function PaineisLed() {
           <div className="grid md:grid-cols-2 gap-8">
             {specifications.map((spec) => (
               <div key={spec.type} className="p-8 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all hover-glow">
-                <spec.icon className="w-12 h-12 text-primary mb-4" />
+                <spec.icon className="w-12 h-12 text-eclipse-blue mb-4" />
                 <h3 className="text-2xl font-heading font-bold mb-2">Painel de LED {spec.type}</h3>
                 <p className="text-muted-foreground mb-4">{spec.description}</p>
                 <div className="mb-4">
@@ -224,7 +224,7 @@ export default function PaineisLed() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase) => (
               <div key={useCase.title} className="p-6 rounded-2xl bg-card border border-border text-center hover:border-primary/50 transition-all">
-                <useCase.icon className="w-10 h-10 text-primary mx-auto mb-4" />
+                <useCase.icon className="w-10 h-10 text-eclipse-blue mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">{useCase.title}</h3>
                 <p className="text-muted-foreground text-sm">{useCase.description}</p>
               </div>

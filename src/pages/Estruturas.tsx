@@ -121,7 +121,7 @@ export default function Estruturas() {
           <div className="grid md:grid-cols-3 gap-8">
             {structureTypes.map((type) => (
               <div key={type.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all">
-                <type.icon className="w-10 h-10 text-primary mb-4" />
+                <type.icon className="w-10 h-10 text-eclipse-blue mb-4" />
                 <h3 className="font-heading font-bold mb-2">{type.title}</h3>
                 <p className="text-muted-foreground text-sm">{type.description}</p>
               </div>
@@ -142,7 +142,7 @@ export default function Estruturas() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((item) => (
               <div key={item.step} className="relative">
-                <div className="text-6xl font-heading font-bold text-primary/20 mb-2">{item.step}</div>
+                <div className="text-6xl font-heading font-bold text-eclipse-blue/20 mb-2">{item.step}</div>
                 <h3 className="font-heading font-bold text-lg mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.description}</p>
               </div>
@@ -162,7 +162,7 @@ export default function Estruturas() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {differentials.map((diff) => (
               <div key={diff.title} className="p-6 rounded-2xl bg-card border border-border">
-                <diff.icon className="w-10 h-10 text-primary mb-4" />
+                <diff.icon className="w-10 h-10 text-eclipse-blue mb-4" />
                 <h3 className="font-heading font-bold mb-2">{diff.title}</h3>
                 <p className="text-muted-foreground text-sm">{diff.description}</p>
               </div>

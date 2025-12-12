@@ -141,8 +141,8 @@ const Index = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto animate-fade-in-up delay-300">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center p-4 rounded-xl glass-card">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-gradient mb-1">{stat.value}</div>
+              <div key={stat.label} className="text-center p-6 rounded-xl bg-card/80 border border-border/50 backdrop-blur-sm">
+                <div className="text-3xl md:text-4xl font-heading font-bold text-eclipse-blue mb-1">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
@@ -191,8 +191,8 @@ const Index = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 p-6 rounded-xl glass-card shadow-glow">
-                <div className="text-4xl font-heading font-bold text-gradient">1993 </div>
+              <div className="absolute -bottom-6 -right-6 p-6 rounded-xl bg-card/90 border border-border/50 backdrop-blur-sm shadow-lg">
+                <div className="text-4xl font-heading font-bold text-eclipse-blue">1993</div>
                 <div className="text-sm text-muted-foreground">Atuando desde</div>
               </div>
             </div>
@@ -270,8 +270,8 @@ const Index = () => {
                   animationDelay: `${index * 100}ms`,
                 }}
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <benefit.icon className="w-7 h-7 text-primary" />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-eclipse-blue/10 flex items-center justify-center">
+                  <benefit.icon className="w-7 h-7 text-eclipse-blue" />
                 </div>
                 <h3 className="text-lg font-heading font-bold mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{benefit.description}</p>
