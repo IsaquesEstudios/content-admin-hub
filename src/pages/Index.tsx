@@ -161,7 +161,7 @@ const Index = () => {
                 <img src={ledPanelImage} alt="Painel de LED indoor de alta resolução" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="absolute -bottom-6 -right-6 p-6 rounded-xl glass-card shadow-glow">
-                <div className="text-4xl font-heading font-bold text-gradient">10+</div>
+                <div className="text-4xl font-heading font-bold text-gradient">O impacto do painel de led e midia exterior </div>
                 <div className="text-sm text-muted-foreground">Anos de experiência</div>
               </div>
             </div>
