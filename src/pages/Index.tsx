@@ -77,7 +77,7 @@ const stats = [
   { value: "500+", label: "Projetos Realizados" },
   { value: "10+", label: "Anos de Experiência" },
   { value: "100%", label: "Clientes Satisfeitos" },
-  { value: "SC", label: "Atendimento Local" },
+  { value: "BR", label: "Todo o Brasil" },
 ];
 
 const Index = () => {
