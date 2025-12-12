@@ -195,7 +195,7 @@ const Index = () => {
                 <div className="text-4xl font-heading font-bold text-gradient">
                   O impacto do painel de led e midia exterior{" "}
                 </div>
-                <div className="text-sm text-muted-foreground">Anos de experiência</div>
+                <div className="text-sm text-muted-foreground">Atuando desde</div>
               </div>
             </div>
           </div>
