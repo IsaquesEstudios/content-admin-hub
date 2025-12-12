@@ -111,8 +111,8 @@ export function Footer() {
             </h3>
             <ul className="space-y-4">
               <li>
-                <a href="https://wa.me/5548984180377" className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors text-sm group">
-                  <MessageCircle className="w-5 h-5 mt-0.5 text-primary text-eclipse-blue" />
+                <a href="https://wa.me/5548984180377" className="flex items-start gap-3 text-muted-foreground hover:text-eclipse-blue transition-colors text-sm group">
+                  <MessageCircle className="w-5 h-5 mt-0.5 text-eclipse-blue" />
                   <span>(48) 98418-0377</span>
                 </a>
               </li>
@@ -129,7 +129,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
-                <MapPin className="w-5 h-5 mt-0.5 text-primary flex-shrink-0" />
+                <MapPin className="w-5 h-5 mt-0.5 text-eclipse-blue flex-shrink-0" />
                 <span>R. Pedro Venâncio Martins, 168<br />Capivari de Baixo/SC, 88745-000</span>
               </li>
             </ul>
