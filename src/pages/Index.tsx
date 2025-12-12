@@ -9,89 +9,75 @@ import ledSignImage from "@/assets/led-sign.jpg";
 import ledStructureImage from "@/assets/led-structure.jpg";
 import ledMaintenanceImage from "@/assets/led-maintenance.jpg";
 import ledPartsImage from "@/assets/led-parts.jpg";
-
-const services = [
-  {
-    title: "Painéis de LED",
-    description: "Painéis de alta resolução (indoor e outdoor) que garantem visibilidade total para propagandas e transmissões.",
-    image: ledPanelImage,
-    href: "/paineis-de-led",
-    badge: "Mais vendido",
-  },
-  {
-    title: "Letreiros em LED",
-    description: "Substitua lonas estáticas por letreiros digitais dinâmicos, permitindo trocar ofertas e mensagens rapidamente.",
-    image: ledSignImage,
-    href: "/letreiros",
-  },
-  {
-    title: "Totem de LED",
-    description: "Estruturas verticais prontas para uso, perfeitas para vitrines de shopping, recepções e postos.",
-    image: ledTotemImage,
-    href: "/totens",
-  },
-  {
-    title: "Estruturas para Painéis",
-    description: "Projetamos e fabricamos o suporte metálico sob medida para o seu painel com acabamento profissional.",
-    image: ledStructureImage,
-    href: "/estruturas",
-  },
-  {
-    title: "Manutenção e Suporte",
-    description: "Configuração de processadores, manutenção e assistência técnica para você não ficar na mão.",
-    image: ledMaintenanceImage,
-    href: "/manutencao",
-  },
-  {
-    title: "Peças e Acessórios",
-    description: "Módulos de LED, cabos, fontes e sending cards para garantir a longevidade do seu equipamento.",
-    image: ledPartsImage,
-    href: "/pecas",
-  },
-];
-
-const benefits = [
-  {
-    icon: Users,
-    title: "Atendimento Humanizado",
-    description: "Acesso direto a especialistas que entendem sua necessidade. Do primeiro contato ao pós-venda.",
-  },
-  {
-    icon: Award,
-    title: "Qualidade no Serviço",
-    description: "Técnica apurada e instalação impecável. Da configuração à montagem, garantimos excelência.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Melhores Prazos",
-    description: "Processos otimizados para entrega e instalação dentro do cronograma combinado.",
-  },
-  {
-    icon: Star,
-    title: "Melhores Materiais",
-    description: "Componentes de primeira linha e estruturas robustas para maior vida útil e cores vivas.",
-  },
-];
-
-const stats = [
-  { value: "500+", label: "Projetos Realizados" },
-  { value: "10+", label: "Anos de Experiência" },
-  { value: "100%", label: "Clientes Satisfeitos" },
-  { value: "BR", label: "Todo o Brasil" },
-];
-
+const services = [{
+  title: "Painéis de LED",
+  description: "Painéis de alta resolução (indoor e outdoor) que garantem visibilidade total para propagandas e transmissões.",
+  image: ledPanelImage,
+  href: "/paineis-de-led",
+  badge: "Mais vendido"
+}, {
+  title: "Letreiros em LED",
+  description: "Substitua lonas estáticas por letreiros digitais dinâmicos, permitindo trocar ofertas e mensagens rapidamente.",
+  image: ledSignImage,
+  href: "/letreiros"
+}, {
+  title: "Totem de LED",
+  description: "Estruturas verticais prontas para uso, perfeitas para vitrines de shopping, recepções e postos.",
+  image: ledTotemImage,
+  href: "/totens"
+}, {
+  title: "Estruturas para Painéis",
+  description: "Projetamos e fabricamos o suporte metálico sob medida para o seu painel com acabamento profissional.",
+  image: ledStructureImage,
+  href: "/estruturas"
+}, {
+  title: "Manutenção e Suporte",
+  description: "Configuração de processadores, manutenção e assistência técnica para você não ficar na mão.",
+  image: ledMaintenanceImage,
+  href: "/manutencao"
+}, {
+  title: "Peças e Acessórios",
+  description: "Módulos de LED, cabos, fontes e sending cards para garantir a longevidade do seu equipamento.",
+  image: ledPartsImage,
+  href: "/pecas"
+}];
+const benefits = [{
+  icon: Users,
+  title: "Atendimento Humanizado",
+  description: "Acesso direto a especialistas que entendem sua necessidade. Do primeiro contato ao pós-venda."
+}, {
+  icon: Award,
+  title: "Qualidade no Serviço",
+  description: "Técnica apurada e instalação impecável. Da configuração à montagem, garantimos excelência."
+}, {
+  icon: CheckCircle,
+  title: "Melhores Prazos",
+  description: "Processos otimizados para entrega e instalação dentro do cronograma combinado."
+}, {
+  icon: Star,
+  title: "Melhores Materiais",
+  description: "Componentes de primeira linha e estruturas robustas para maior vida útil e cores vivas."
+}];
+const stats = [{
+  value: "500+",
+  label: "Projetos Realizados"
+}, {
+  value: "10+",
+  label: "Anos de Experiência"
+}, {
+  value: "100%",
+  label: "Clientes Satisfeitos"
+}, {
+  value: "BR",
+  label: "Todo o Brasil"
+}];
 const Index = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt="Painel de LED iluminado em fachada moderna"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Painel de LED iluminado em fachada moderna" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
         </div>
 
@@ -105,17 +91,10 @@ const Index = () => {
               Ilumine sua marca com{" "}
               <span className="text-gradient">alto impacto</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              Painéis de LED, estruturas personalizadas e manutenção especializada 
-              com quem entende do assunto. Transforme sua comunicação visual em Santa Catarina.
-            </p>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">Painéis de LED, estruturas personalizadas e manutenção especializada com quem entende do assunto. Transforme sua comunicação visual em todo o Brasil.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <a
-                  href="https://wa.me/5548999999999?text=Olá! Gostaria de um orçamento para painel de LED."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://wa.me/5548999999999?text=Olá! Gostaria de um orçamento para painel de LED." target="_blank" rel="noopener noreferrer">
                   Solicitar Orçamento
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
@@ -131,17 +110,12 @@ const Index = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto animate-fade-in-up delay-300">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="text-center p-4 rounded-xl glass-card"
-              >
+            {stats.map(stat => <div key={stat.label} className="text-center p-4 rounded-xl glass-card">
                 <div className="text-3xl md:text-4xl font-heading font-bold text-gradient mb-1">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
@@ -184,11 +158,7 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-card">
-                <img
-                  src={ledPanelImage}
-                  alt="Painel de LED indoor de alta resolução"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+                <img src={ledPanelImage} alt="Painel de LED indoor de alta resolução" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="absolute -bottom-6 -right-6 p-6 rounded-xl glass-card shadow-glow">
                 <div className="text-4xl font-heading font-bold text-gradient">10+</div>
@@ -217,24 +187,14 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link
-                key={service.title}
-                to={service.href}
-                className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover-glow"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {services.map((service, index) => <Link key={service.title} to={service.href} className="group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover-glow" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  {service.badge && (
-                    <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  {service.badge && <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
                       {service.badge}
-                    </span>
-                  )}
+                    </span>}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-heading font-bold mb-2 group-hover:text-primary transition-colors">
@@ -248,8 +208,7 @@ const Index = () => {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
-              </Link>
-            ))}
+              </Link>)}
           </div>
         </div>
       </section>
@@ -268,12 +227,9 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={benefit.title}
-                className="p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-glow text-center"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {benefits.map((benefit, index) => <div key={benefit.title} className="p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-glow text-center" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center">
                   <benefit.icon className="w-7 h-7 text-primary" />
                 </div>
@@ -283,8 +239,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {benefit.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -303,11 +258,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" asChild>
-              <a
-                href="https://wa.me/5548999999999?text=Olá! Gostaria de um orçamento."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://wa.me/5548999999999?text=Olá! Gostaria de um orçamento." target="_blank" rel="noopener noreferrer">
                 Falar pelo WhatsApp
               </a>
             </Button>
@@ -319,8 +270,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
