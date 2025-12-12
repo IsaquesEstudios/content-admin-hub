@@ -68,6 +68,7 @@ export default {
           gray: "hsl(var(--eclipse-gray))",
           "light-gray": "hsl(var(--eclipse-light-gray))",
           orange: "hsl(var(--eclipse-orange))",
+          blue: "hsl(var(--eclipse-blue))",
         },
       },
       borderRadius: {
