@@ -45,6 +45,7 @@
     --eclipse-gray: 220 15% 25%;
     --eclipse-light-gray: 220 10% 45%;
     --eclipse-orange: 30 100% 55%;
+    --eclipse-blue: 195 96% 44%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(330, 90%, 55%) 0%, hsl(350, 100%, 65%) 100%);

@@ -142,18 +142,18 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+5548984180377"
-                  className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="flex items-start gap-3 text-muted-foreground hover:text-eclipse-blue transition-colors text-sm"
                 >
-                  <Phone className="w-5 h-5 mt-0.5 text-primary" />
+                  <Phone className="w-5 h-5 mt-0.5 text-eclipse-blue" />
                   <span>(48) 98418-0377</span>
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:contato@eclipseled.com.br"
-                  className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
+                  className="flex items-start gap-3 text-muted-foreground hover:text-eclipse-blue transition-colors text-sm"
                 >
-                  <Mail className="w-5 h-5 mt-0.5 text-primary" />
+                  <Mail className="w-5 h-5 mt-0.5 text-eclipse-blue" />
                   <span>contato@eclipseled.com.br</span>
                 </a>
               </li>
