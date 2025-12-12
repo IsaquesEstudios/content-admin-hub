@@ -87,7 +87,7 @@ export default function Pecas() {
               Realizamos troca e manutenção de tudo que for necessário. Estoque local em Santa Catarina.
             </p>
             <Button variant="hero" size="lg" asChild>
-              <a href="https://wa.me/5548999999999" target="_blank">
+              <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
                 Solicitar Peças
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
@@ -181,7 +181,7 @@ export default function Pecas() {
             Peças com entrega rápida em <span className="text-gradient">Santa Catarina</span>
           </h2>
           <Button variant="hero" size="xl" asChild>
-            <a href="https://wa.me/5548999999999" target="_blank">
+            <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
               Solicitar Orçamento
             </a>
           </Button>

@@ -66,7 +66,7 @@ export default function Manutencao() {
               tem as melhores peças e pronto atendimento técnico em Santa Catarina.
             </p>
             <Button variant="hero" size="lg" asChild>
-              <a href="https://wa.me/5548999999999" target="_blank">
+              <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
                 Solicitar Atendimento
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
@@ -171,7 +171,7 @@ export default function Manutencao() {
             Manutenção de LEDs em <span className="text-gradient">Santa Catarina</span>
           </h2>
           <Button variant="hero" size="xl" asChild>
-            <a href="https://wa.me/5548999999999" target="_blank">
+            <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
               Falar com Técnico
             </a>
           </Button>

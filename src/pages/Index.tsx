@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Play, Star, Users, CheckCircle, Award } from "lucide-react";
+import { ArrowRight, Play, Star, Users, CheckCircle, Award, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroImage from "@/assets/hero-led-panel.jpg";
@@ -121,7 +121,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
                 <a
-                  href="https://wa.me/5548999999999?text=Olá! Gostaria de um orçamento para painel de LED."
+                  href="https://wa.me/5548984180377?text=Olá! Gostaria de um orçamento para painel de LED."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -295,7 +295,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" asChild>
               <a
-                href="https://wa.me/5548999999999?text=Olá! Gostaria de um orçamento."
+                href="https://wa.me/5548984180377?text=Olá! Gostaria de um orçamento."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -303,7 +303,10 @@ const Index = () => {
               </a>
             </Button>
             <Button variant="outline" size="xl" asChild>
-              <a href="tel:+5548999999999">Ligar Agora</a>
+              <a href="tel:+5548984180377">
+                <Phone className="w-5 h-5 mr-2 text-eclipse-blue" />
+                Ligar Agora
+              </a>
             </Button>
           </div>
         </div>

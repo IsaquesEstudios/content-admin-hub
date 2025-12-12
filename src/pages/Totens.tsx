@@ -73,7 +73,7 @@ export default function Totens() {
               Potencialize suas mensagens com elegância, mobilidade e alto impacto visual.
             </p>
             <Button variant="hero" size="lg" asChild>
-              <a href="https://wa.me/5548999999999" target="_blank">
+              <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
                 Solicitar Orçamento
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
@@ -176,7 +176,7 @@ export default function Totens() {
             Faça seu totem de LED <span className="text-gradient">conosco</span>
           </h2>
           <Button variant="hero" size="xl" asChild>
-            <a href="https://wa.me/5548999999999" target="_blank">
+            <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
               Falar com Especialista
             </a>
           </Button>
