@@ -131,13 +131,13 @@ export default function Pecas() {
           <div className="grid md:grid-cols-2 gap-8">
             {categories.map((category) => (
               <div key={category.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all">
-                <category.icon className="w-10 h-10 text-primary mb-4" />
+                <category.icon className="w-10 h-10 text-eclipse-blue mb-4" />
                 <h3 className="text-xl font-heading font-bold mb-2">{category.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{category.description}</p>
                 <ul className="space-y-2">
                   {category.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-eclipse-blue" />
                       {item}
                     </li>
                   ))}
@@ -159,7 +159,7 @@ export default function Pecas() {
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="p-6 rounded-2xl bg-background border border-border text-center">
-                <benefit.icon className="w-10 h-10 text-primary mx-auto mb-4" />
+                <benefit.icon className="w-10 h-10 text-eclipse-blue mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground text-sm">{benefit.description}</p>
               </div>

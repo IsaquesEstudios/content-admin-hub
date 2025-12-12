@@ -113,10 +113,10 @@ export default function SobreNos() {
       {/* Stats */}
       <section className="py-12 bg-card border-y border-border">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-heading font-bold text-gradient mb-1">
+              <div key={stat.label} className="text-center p-6 rounded-xl bg-background/50 border border-border/50">
+                <div className="text-3xl md:text-4xl font-heading font-bold text-eclipse-blue mb-1">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -131,7 +131,7 @@ export default function SobreNos() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Lightbulb className="w-12 h-12 text-primary mx-auto mb-4" />
+              <Lightbulb className="w-12 h-12 text-eclipse-blue mx-auto mb-4" />
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">
                 Nossa <span className="text-gradient">Essência</span>
               </h2>
@@ -157,7 +157,7 @@ export default function SobreNos() {
       <section className="section-padding bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <Target className="w-12 h-12 text-primary mx-auto mb-4" />
+            <Target className="w-12 h-12 text-eclipse-blue mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
               O Que <span className="text-gradient">Fazemos</span>
             </h2>
@@ -172,7 +172,7 @@ export default function SobreNos() {
                 key={item.title} 
                 className="p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all"
               >
-                <item.icon className="w-10 h-10 text-primary mb-4" />
+                <item.icon className="w-10 h-10 text-eclipse-blue mb-4" />
                 <h3 className="font-heading font-bold text-lg mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
@@ -198,7 +198,7 @@ export default function SobreNos() {
                 key={item.title} 
                 className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all hover-glow"
               >
-                <item.icon className="w-12 h-12 text-primary mb-4" />
+                <item.icon className="w-12 h-12 text-eclipse-blue mb-4" />
                 <h3 className="font-heading font-bold text-xl mb-3">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
@@ -211,7 +211,7 @@ export default function SobreNos() {
       <section className="section-padding bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+            <Users className="w-12 h-12 text-eclipse-blue mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
               Quem <span className="text-gradient">Atendemos</span>
             </h2>
@@ -226,7 +226,7 @@ export default function SobreNos() {
                 key={client.name} 
                 className="p-6 rounded-2xl bg-background border border-border text-center hover:border-primary/50 transition-all"
               >
-                <client.icon className="w-10 h-10 text-primary mx-auto mb-3" />
+                <client.icon className="w-10 h-10 text-eclipse-blue mx-auto mb-3" />
                 <p className="text-sm font-medium">{client.name}</p>
               </div>
             ))}

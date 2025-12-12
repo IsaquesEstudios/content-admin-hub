@@ -113,7 +113,7 @@ export default function Totens() {
           <div className="grid md:grid-cols-3 gap-8">
             {advantages.map((advantage) => (
               <div key={advantage.title} className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all text-center">
-                <advantage.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                <advantage.icon className="w-12 h-12 text-eclipse-blue mx-auto mb-4" />
                 <h3 className="text-lg font-heading font-bold mb-3">{advantage.title}</h3>
                 <p className="text-muted-foreground text-sm">{advantage.description}</p>
               </div>
@@ -133,7 +133,7 @@ export default function Totens() {
           <div className="grid md:grid-cols-3 gap-8">
             {useCases.map((item) => (
               <div key={item.title} className="p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all text-center">
-                <item.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                <item.icon className="w-12 h-12 text-eclipse-blue mx-auto mb-4" />
                 <h3 className="font-heading font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground text-sm">{item.description}</p>
               </div>
@@ -154,7 +154,7 @@ export default function Totens() {
           <div className="grid md:grid-cols-3 gap-8">
             {types.map((type) => (
               <div key={type.title} className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all">
-                <type.icon className="w-10 h-10 text-primary mb-4" />
+                <type.icon className="w-10 h-10 text-eclipse-blue mb-4" />
                 <h3 className="font-heading font-bold mb-2">{type.title}</h3>
                 <p className="text-muted-foreground text-sm">{type.description}</p>
               </div>

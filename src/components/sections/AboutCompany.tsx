@@ -35,19 +35,19 @@ export function AboutCompany() {
             </p>
             <ul className="grid grid-cols-2 gap-3 mt-6">
               <li className="flex items-center gap-2 text-sm">
-                <span className="w-2 h-2 rounded-full bg-primary" />
+                <span className="w-2 h-2 rounded-full bg-eclipse-blue" />
                 <span>+500 projetos realizados</span>
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <span className="w-2 h-2 rounded-full bg-primary" />
+                <span className="w-2 h-2 rounded-full bg-eclipse-blue" />
                 <span>+10 anos de experiência</span>
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <span className="w-2 h-2 rounded-full bg-primary" />
+                <span className="w-2 h-2 rounded-full bg-eclipse-blue" />
                 <span>Atendimento em toda SC</span>
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <span className="w-2 h-2 rounded-full bg-primary" />
+                <span className="w-2 h-2 rounded-full bg-eclipse-blue" />
                 <span>Suporte técnico local</span>
               </li>
             </ul>
