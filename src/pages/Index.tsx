@@ -192,9 +192,7 @@ const Index = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 p-6 rounded-xl glass-card shadow-glow">
-                <div className="text-4xl font-heading font-bold text-gradient">
-                  O impacto do painel de led e midia exterior{" "}
-                </div>
+                <div className="text-4xl font-heading font-bold text-gradient">1993 </div>
                 <div className="text-sm text-muted-foreground">Atuando desde</div>
               </div>
             </div>
