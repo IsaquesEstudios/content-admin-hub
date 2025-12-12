@@ -119,14 +119,14 @@ export default function Contato() {
                     rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="group block"
                   >
-                    <info.icon className="w-8 h-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                    <info.icon className="w-8 h-8 text-eclipse-blue mx-auto mb-2 group-hover:scale-110 transition-transform" />
                     <h3 className="font-heading font-semibold text-sm mb-1">{info.title}</h3>
                     <p className="text-primary font-medium text-sm group-hover:underline">{info.value}</p>
                     <p className="text-xs text-muted-foreground">{info.description}</p>
                   </a>
                 ) : (
                   <div>
-                    <info.icon className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <info.icon className="w-8 h-8 text-eclipse-blue mx-auto mb-2" />
                     <h3 className="font-heading font-semibold text-sm mb-1">{info.title}</h3>
                     <p className="text-foreground font-medium text-sm">{info.value}</p>
                     <p className="text-xs text-muted-foreground">{info.description}</p>
@@ -228,7 +228,7 @@ export default function Contato() {
               </div>
               <div className="mt-6 p-6 rounded-xl bg-card border border-border">
                 <div className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <MapPin className="w-6 h-6 text-eclipse-blue flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-heading font-semibold mb-1">Endereço</h3>
                     <p className="text-muted-foreground">

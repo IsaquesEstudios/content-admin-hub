@@ -69,7 +69,7 @@ export default function Letreiros() {
               Soluções completas de sinalização luminosa para sua empresa.
             </p>
             <Button variant="hero" size="lg" asChild>
-              <a href="https://wa.me/5548999999999" target="_blank">
+              <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
                 Solicitar Orçamento
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
@@ -157,7 +157,7 @@ export default function Letreiros() {
             Atendemos toda Santa Catarina com os melhores letreiros de LED do mercado.
           </p>
           <Button variant="hero" size="xl" asChild>
-            <a href="https://wa.me/5548999999999" target="_blank">
+            <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
               Falar com Especialista
             </a>
           </Button>
