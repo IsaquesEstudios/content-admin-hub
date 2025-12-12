@@ -164,7 +164,7 @@ const Index = () => {
             <div className="space-y-6">
               <span className="text-primary font-medium uppercase tracking-wider text-sm">Sobre a Eclipse</span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
-                O impacto do painel de led e midia exterior <span className="text-gradient">negócios locais</span>
+                O impacto do painel de led e midia exterior em<span className="text-gradient">negócios locais</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 A comunicação visual é o vendedor silencioso da sua empresa. Para supermercados, postos e comércios
