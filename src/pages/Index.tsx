@@ -19,7 +19,7 @@ const services = [
     badge: "Mais vendido",
   },
   {
-    title: "Letreiros em LED",
+    title: "Placas de LED",
     description:
       "Substitua lonas estáticas por letreiros digitais dinâmicos, permitindo trocar ofertas e mensagens rapidamente.",
     image: ledSignImage,
