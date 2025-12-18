@@ -54,7 +54,7 @@ const benefits = [
   {
     icon: Users,
     title: "Atendimento Humanizado",
-    description: "Acesso direto a especialistas que entendem sua necessidade. Do primeiro contato ao pós-venda.",
+    description: "Acesso direto a especialistas que entendem sua necessidade. Do primeiro contato até pós-venda.",
   },
   {
     icon: Award,
