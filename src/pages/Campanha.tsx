@@ -26,22 +26,36 @@ const processSteps = [{
 }];
 const advantages = [{
   title: "Diversidade",
-  description: "Modelos para todas as aplicações indoor e outdoor"
+  description: "Escolha entre diferentes modelos de painel em led para seu projeto.",
+  icon: "grid"
 }, {
-  title: "Fácil Integração",
-  description: "Compatível com diversos sistemas e formatos"
+  title: "Fácil integração",
+  description: "Adicione informações e novos projetos ao sistema de maneira mais rápida.",
+  icon: "monitor"
 }, {
   title: "Garantia e Suporte",
-  description: "Assistência técnica especializada"
+  description: "Suporte remoto para operação e reduzindo os custos para o cliente.",
+  icon: "support"
 }, {
   title: "Alta Iluminação",
-  description: "Visibilidade perfeita em qualquer ambiente"
+  description: "Painéis de LED com intensidade luminosa elevada para melhor visibilidade.",
+  icon: "brightness"
 }, {
-  title: "Projetos Regularizados",
-  description: "Documentação e licenças em conformidade"
+  title: "Projetos Regularizado",
+  description: "Seu projeto dentro das normas de engenharia como exigidas.",
+  icon: "document"
+}, {
+  title: "Painel de LED",
+  description: "Painéis de LED internos de alta resolução para promover seu negócio.",
+  icon: "led"
+}, {
+  title: "Monitores Comerciais",
+  description: "Fachadas internas e externas. Perfeito para lojas, bares, outros.",
+  icon: "commercial"
 }, {
   title: "Desempenho",
-  description: "Tecnologia de ponta com máxima eficiência"
+  description: "Desempenho de projeção em alta definição com diferentes modelos de leds.",
+  icon: "performance"
 }];
 const faqItems = [{
   question: "Qual é a vida útil de um painel de LED?",
@@ -162,23 +176,101 @@ export default function Campanha() {
       </section>
 
       {/* Advantages Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-[#0a0a0a]">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <img src={paineisLed} alt="Painéis de LED Eclipse" className="rounded-2xl shadow-2xl w-full" />
-            </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                <span className="text-[#ff0080]">Vantagens</span> Dos Nossos Painéis de Led Para Outdoor e Indoor
-              </h2>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {advantages.map((advantage, index) => <div key={index} className="bg-[#1a1a1a] border border-gray-800 rounded-xl p-5 hover:border-[#ff0080]/50 transition-all">
-                    <h3 className="text-lg font-bold text-[#ff0080] mb-2">{advantage.title}</h3>
-                    <p className="text-gray-400 text-sm">{advantage.description}</p>
-                  </div>)}
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            Paineis de Led Para Outdoor e Indoor
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+                  {advantage.icon === "grid" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="3" y="3" width="7" height="7" />
+                      <rect x="14" y="3" width="7" height="7" />
+                      <rect x="3" y="14" width="7" height="7" />
+                      <rect x="14" y="14" width="7" height="7" />
+                    </svg>
+                  )}
+                  {advantage.icon === "monitor" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                      <rect x="5" y="6" width="4" height="3" />
+                      <rect x="10" y="6" width="4" height="3" />
+                      <rect x="15" y="6" width="4" height="3" />
+                      <rect x="5" y="10" width="4" height="3" />
+                      <rect x="10" y="10" width="4" height="3" />
+                      <rect x="15" y="10" width="4" height="3" />
+                    </svg>
+                  )}
+                  {advantage.icon === "support" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                      <path d="M12 18a6 6 0 100-12 6 6 0 000 12z" />
+                      <path d="M12 14a2 2 0 100-4 2 2 0 000 4z" />
+                      <line x1="12" y1="2" x2="12" y2="6" />
+                      <line x1="12" y1="18" x2="12" y2="22" />
+                      <line x1="2" y1="12" x2="6" y2="12" />
+                      <line x1="18" y1="12" x2="22" y2="12" />
+                    </svg>
+                  )}
+                  {advantage.icon === "brightness" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <circle cx="12" cy="12" r="5" />
+                      <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    </svg>
+                  )}
+                  {advantage.icon === "document" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                      <polyline points="14,2 14,8 20,8" />
+                      <line x1="8" y1="13" x2="16" y2="13" />
+                      <line x1="8" y1="17" x2="16" y2="17" />
+                    </svg>
+                  )}
+                  {advantage.icon === "led" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="2" y="2" width="20" height="20" rx="2" />
+                      <rect x="5" y="5" width="3" height="3" />
+                      <rect x="10.5" y="5" width="3" height="3" />
+                      <rect x="16" y="5" width="3" height="3" />
+                      <rect x="5" y="10.5" width="3" height="3" />
+                      <rect x="10.5" y="10.5" width="3" height="3" />
+                      <rect x="16" y="10.5" width="3" height="3" />
+                      <rect x="5" y="16" width="3" height="3" />
+                      <rect x="10.5" y="16" width="3" height="3" />
+                      <rect x="16" y="16" width="3" height="3" />
+                    </svg>
+                  )}
+                  {advantage.icon === "commercial" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                  )}
+                  {advantage.icon === "performance" && (
+                    <svg className="w-10 h-10 text-[#ff0080]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="3" y="3" width="7" height="7" rx="1" />
+                      <rect x="14" y="3" width="7" height="7" rx="1" />
+                      <rect x="3" y="14" width="7" height="7" rx="1" />
+                      <rect x="14" y="14" width="7" height="7" rx="1" />
+                      <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" />
+                      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                      <circle cx="6.5" cy="17.5" r="1.5" fill="currentColor" />
+                      <circle cx="17.5" cy="17.5" r="1.5" fill="currentColor" />
+                    </svg>
+                  )}
+                </div>
+                <div>
+                  <h3 className="text-[#ffd700] font-bold text-lg mb-1">{advantage.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{advantage.description}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
