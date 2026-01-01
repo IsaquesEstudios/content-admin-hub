@@ -9,6 +9,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import Index from "./pages/Index";
 import Servicos from "./pages/Servicos";
 import PaineisLed from "./pages/PaineisLed";
+import Campanha from "./pages/Campanha";
 import Letreiros from "./pages/Letreiros";
 import Totens from "./pages/Totens";
 import Estruturas from "./pages/Estruturas";
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/servicos" element={<Servicos />} />
             <Route path="/paineis-de-led" element={<PaineisLed />} />
+            <Route path="/campanha" element={<Campanha />} />
             <Route path="/letreiros" element={<Letreiros />} />
             <Route path="/totens" element={<Totens />} />
             <Route path="/estruturas" element={<Estruturas />} />
