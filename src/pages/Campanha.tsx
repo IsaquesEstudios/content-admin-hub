@@ -2,10 +2,12 @@ import { Phone, MessageCircle, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoEclipse from "@/assets/logo-eclipse.webp";
-import heroDesktop from "@/assets/campanha/comunicacao-visual.jpg";
-import heroMobile from "@/assets/campanha/comunicacao-visual-celular.jpg";
-import paineisLed from "@/assets/campanha/paineis-em-led.jpg";
-import comunicacao from "@/assets/campanha/comunicacao.jpg";
+
+// Imagens da campanha - usando caminhos absolutos da pasta public para garantir inclusão no build
+const heroDesktop = "/images/campanha/comunicacao-visual.jpg";
+const heroMobile = "/images/campanha/comunicacao-visual-celular.jpg";
+const paineisLed = "/images/campanha/paineis-em-led.jpg";
+const comunicacao = "/images/campanha/comunicacao.jpg";
 const whatsappLink = "https://api.whatsapp.com/send?phone=554884180377&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20Pain%C3%A9is%20de%20LED.";
 const processSteps = [{
   number: "1º",
