@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useNavigate, Navigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
+import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Eye, EyeOff, Loader2 } from "lucide-react";
+import { Eye, EyeOff, Loader2, ArrowLeft } from "lucide-react";
 import { z } from "zod";
 
 const authSchema = z.object({
@@ -15,6 +16,7 @@ const authSchema = z.object({
 
 export default function Auth() {
   const [isLogin, setIsLogin] = useState(true);
+  const [isForgotPassword, setIsForgotPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -38,8 +40,13 @@ export default function Auth() {
     return <Navigate to="/user" replace />;
   }
 
-  const validateForm = () => {
+  const validateForm = (emailOnly = false) => {
     try {
+      if (emailOnly) {
+        z.string().email("Email inválido").parse(email);
+        setErrors({});
+        return true;
+      }
       authSchema.parse({ email, password });
       setErrors({});
       return true;
@@ -47,12 +54,48 @@ export default function Auth() {
       if (err instanceof z.ZodError) {
         const fieldErrors: { email?: string; password?: string } = {};
         err.errors.forEach((e) => {
-          if (e.path[0] === "email") fieldErrors.email = e.message;
+          if (e.path[0] === "email" || e.path.length === 0) fieldErrors.email = e.message;
           if (e.path[0] === "password") fieldErrors.password = e.message;
         });
         setErrors(fieldErrors);
       }
       return false;
+    }
+  };
+
+  const handleForgotPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm(true)) return;
+
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/auth`,
+      });
+
+      if (error) {
+        toast({
+          title: "Erro",
+          description: error.message,
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Email enviado!",
+          description: "Verifique sua caixa de entrada para redefinir sua senha.",
+        });
+        setIsForgotPassword(false);
+      }
+    } catch (err) {
+      toast({
+        title: "Erro",
+        description: "Ocorreu um erro inesperado. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -122,6 +165,67 @@ export default function Auth() {
     }
   };
 
+  // Forgot Password View
+  if (isForgotPassword) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background px-4">
+        <div className="w-full max-w-md">
+          <div className="text-center mb-8">
+            <span className="text-3xl font-heading font-bold text-gradient">
+              eclipse
+            </span>
+            <p className="text-muted-foreground mt-2">
+              Recuperar senha
+            </p>
+          </div>
+
+          <div className="p-8 rounded-2xl bg-card border border-border">
+            <form onSubmit={handleForgotPassword} className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={errors.email ? "border-destructive" : ""}
+                />
+                {errors.email && (
+                  <p className="text-sm text-destructive">{errors.email}</p>
+                )}
+              </div>
+
+              <Button
+                type="submit"
+                variant="hero"
+                size="lg"
+                className="w-full"
+                disabled={loading}
+              >
+                {loading ? (
+                  <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                ) : null}
+                Enviar email de recuperação
+              </Button>
+            </form>
+
+            <div className="mt-6 text-center">
+              <button
+                type="button"
+                onClick={() => setIsForgotPassword(false)}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Voltar ao login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-md">
@@ -152,7 +256,18 @@ export default function Auth() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password">Senha</Label>
+              <div className="flex items-center justify-between">
+                <Label htmlFor="password">Senha</Label>
+                {isLogin && (
+                  <button
+                    type="button"
+                    onClick={() => setIsForgotPassword(true)}
+                    className="text-xs text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Esqueceu a senha?
+                  </button>
+                )}
+              </div>
               <div className="relative">
                 <Input
                   id="password"
