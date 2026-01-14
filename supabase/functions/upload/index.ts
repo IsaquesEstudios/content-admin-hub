@@ -23,23 +23,57 @@ Deno.serve(async (req) => {
       })
     }
 
-    // Processar upload
-    const formData = await req.formData()
-    const file = formData.get('data') as File
-    
-    if (!file) {
-      console.error('No file provided in request')
-      return new Response(JSON.stringify({ error: 'No file provided' }), {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
-      })
+    const contentType = req.headers.get('content-type') || ''
+    let fileData: ArrayBuffer
+    let fileName: string
+    let mimeType: string
+
+    // Detectar se é form-data ou binary direto
+    if (contentType.includes('multipart/form-data')) {
+      // Processar como form data
+      console.log('Processing as multipart/form-data')
+      const formData = await req.formData()
+      const file = formData.get('data') as File
+      
+      if (!file) {
+        return new Response(JSON.stringify({ error: 'No file provided' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        })
+      }
+      
+      fileData = await file.arrayBuffer()
+      fileName = file.name || 'upload'
+      mimeType = file.type || 'image/jpeg'
+    } else {
+      // Processar como binary direto (n8n Binary File)
+      console.log('Processing as raw binary data')
+      fileData = await req.arrayBuffer()
+      
+      if (!fileData || fileData.byteLength === 0) {
+        return new Response(JSON.stringify({ error: 'No file data provided' }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        })
+      }
+      
+      // Determinar extensão e mime type
+      mimeType = contentType.split(';')[0] || 'image/jpeg'
+      const extMap: Record<string, string> = {
+        'image/jpeg': 'jpg',
+        'image/png': 'png',
+        'image/webp': 'webp',
+        'image/gif': 'gif',
+      }
+      const ext = extMap[mimeType] || 'jpg'
+      fileName = `upload.${ext}`
     }
 
-    console.log(`Uploading file: ${file.name}, type: ${file.type}, size: ${file.size}`)
+    console.log(`File size: ${fileData.byteLength} bytes, type: ${mimeType}`)
 
     // Gerar nome único
-    const ext = file.name.split('.').pop() || 'jpg'
-    const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${ext}`
+    const ext = fileName.split('.').pop() || 'jpg'
+    const uniqueFileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${ext}`
 
     // Upload para storage
     const supabase = createClient(
@@ -49,8 +83,8 @@ Deno.serve(async (req) => {
 
     const { data, error } = await supabase.storage
       .from('blog-images')
-      .upload(fileName, file, {
-        contentType: file.type,
+      .upload(uniqueFileName, fileData, {
+        contentType: mimeType,
         upsert: false
       })
 
@@ -64,14 +98,14 @@ Deno.serve(async (req) => {
     // Retornar URL pública
     const { data: { publicUrl } } = supabase.storage
       .from('blog-images')
-      .getPublicUrl(fileName)
+      .getPublicUrl(uniqueFileName)
 
     console.log('Public URL:', publicUrl)
 
     return new Response(JSON.stringify({ 
       success: true,
       url: publicUrl,
-      fileName: fileName
+      fileName: uniqueFileName
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     })
