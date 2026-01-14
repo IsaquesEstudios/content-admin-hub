@@ -140,21 +140,7 @@ export default function BlogPost() {
           <article className="max-w-4xl mx-auto">
             {post.content ? (
               <div
-                className="blog-content prose prose-lg prose-invert max-w-none 
-                  prose-headings:font-heading prose-headings:text-foreground prose-headings:font-bold
-                  prose-h1:text-3xl prose-h1:mt-8 prose-h1:mb-4
-                  prose-h2:text-2xl prose-h2:mt-6 prose-h2:mb-3
-                  prose-h3:text-xl prose-h3:mt-4 prose-h3:mb-2
-                  prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-4
-                  prose-a:text-primary prose-a:underline hover:prose-a:text-primary/80
-                  prose-strong:text-foreground prose-strong:font-semibold
-                  prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-4
-                  prose-ol:list-decimal prose-ol:pl-6 prose-ol:mb-4
-                  prose-li:text-foreground prose-li:mb-2
-                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic
-                  prose-img:rounded-xl prose-img:w-full prose-img:my-6 prose-img:shadow-lg
-                  prose-figure:my-6
-                  prose-figcaption:text-muted-foreground prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:mt-2"
+                className="blog-content"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             ) : (
