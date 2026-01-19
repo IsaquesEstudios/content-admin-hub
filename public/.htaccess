@@ -2,8 +2,8 @@
   RewriteEngine On
   RewriteBase /
 
-  # Proxy sitemap.xml para o edge function
-  RewriteRule ^sitemap\.xml$ https://fuagnnrpnjpnrvudmtie.supabase.co/functions/v1/sitemap [P,L]
+  # Sitemap do Google (redirect para o gerador dinâmico)
+  RewriteRule ^sitemap\.xml$ https://fuagnnrpnjpnrvudmtie.supabase.co/functions/v1/sitemap [R=301,L]
 
   # SPA fallback
   RewriteCond %{REQUEST_FILENAME} !-f
