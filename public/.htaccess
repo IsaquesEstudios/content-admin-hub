@@ -1,6 +1,11 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Proxy sitemap.xml para o edge function
+  RewriteRule ^sitemap\.xml$ https://fuagnnrpnjpnrvudmtie.supabase.co/functions/v1/sitemap [P,L]
+
+  # SPA fallback
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
