@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.create-post]
 verify_jwt = false
+
+[functions.get-links]
+verify_jwt = false

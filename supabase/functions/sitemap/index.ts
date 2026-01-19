@@ -19,6 +19,9 @@ const staticPages = [
   { loc: '/sobre', priority: '0.8', changefreq: 'monthly' },
   { loc: '/contato', priority: '0.8', changefreq: 'monthly' },
   { loc: '/blog', priority: '0.8', changefreq: 'daily' },
+  { loc: '/campanha', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/politica-de-privacidade', priority: '0.4', changefreq: 'yearly' },
+  { loc: '/termos-de-uso', priority: '0.4', changefreq: 'yearly' },
 ]
 
 Deno.serve(async (req) => {
