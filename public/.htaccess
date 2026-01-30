@@ -5,8 +5,26 @@
   # Sitemap do Google (redirect para o gerador dinâmico)
   RewriteRule ^sitemap\.xml$ https://fuagnnrpnjpnrvudmtie.supabase.co/functions/v1/sitemap [R=301,L]
 
-  # SPA fallback
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+  # Arquivos estáticos reais (servir diretamente)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Home - servir SPA diretamente
+  RewriteRule ^$ index.html [L]
+
+  # Rotas estáticas conhecidas - servir SPA diretamente
+  RewriteRule ^(servicos|paineis-de-led|campanha|letreiros|totens|estruturas|manutencao|pecas|sobre|contato|auth|politica-de-privacidade|termos-de-uso)/?$ index.html [L]
+
+  # Rotas admin - servir SPA diretamente
+  RewriteRule ^user/?$ index.html [L]
+  RewriteRule ^user/(blog|seo)/?$ index.html [L]
+
+  # Blog index - servir SPA diretamente
+  RewriteRule ^blog/?$ index.html [L]
+
+  # Blog posts - validar via Edge Function (verifica se post existe)
+  RewriteRule ^blog/(.+)$ https://fuagnnrpnjpnrvudmtie.supabase.co/functions/v1/validate-url?path=/blog/$1 [R=302,L]
+
+  # Qualquer outra rota desconhecida - validar via Edge Function (retorna 410)
+  RewriteRule ^(.+)$ https://fuagnnrpnjpnrvudmtie.supabase.co/functions/v1/validate-url?path=/$1 [R=302,L]
 </IfModule>
