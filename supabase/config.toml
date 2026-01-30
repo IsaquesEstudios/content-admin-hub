@@ -11,3 +11,6 @@ verify_jwt = false
 
 [functions.get-links]
 verify_jwt = false
+
+[functions.validate-url]
+verify_jwt = false

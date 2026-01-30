@@ -7,18 +7,18 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    console.error("410 Gone: User attempted to access removed route:", location.pathname);
   }, [location.pathname]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center px-4">
         <div className="mb-8">
-          <span className="text-8xl font-heading font-bold text-gradient">404</span>
+          <span className="text-8xl font-heading font-bold text-gradient">410</span>
         </div>
-        <h1 className="text-3xl font-heading font-bold mb-4">Página não encontrada</h1>
+        <h1 className="text-3xl font-heading font-bold mb-4">Página Removida</h1>
         <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-          A página que você está procurando não existe ou foi movida.
+          Esta página foi permanentemente removida e não está mais disponível.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="default" asChild>
