@@ -24,9 +24,9 @@ jobs:
     - name: 📦 Instalar Dependências
       run: npm install
 
-    # 4. Constrói o site (Gera a pasta 'dist')
-    - name: 🛠️ Build do Projeto
-      run: npm run build
+    # 4. Constrói o site com SSG (Gera a pasta 'dist' com HTML pré-renderizado)
+    - name: 🛠️ Build do Projeto (SSG)
+      run: npx vite-react-ssg build
       env:
         VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
         VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}

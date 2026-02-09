@@ -15,4 +15,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssgOptions: {
+    script: 'defer',
+    formatting: 'none',
+    dirStyle: 'nested',
+    mock: true,
+  },
+  ssr: {
+    noExternal: ['@tanstack/react-query'],
+  },
 }));
