@@ -144,7 +144,7 @@ export default function Servicos() {
             gratuita para encontrar a melhor solução para o seu negócio.
           </p>
           <Button variant="hero" size="xl" asChild>
-            <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5548999680600" target="_blank" rel="noopener noreferrer">
               Falar com Especialista
             </a>
           </Button>

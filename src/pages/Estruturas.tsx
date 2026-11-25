@@ -79,7 +79,7 @@ export default function Estruturas() {
               de estruturas sob medida para fachadas, totens e grandes formatos.
             </p>
             <Button variant="hero" size="lg" asChild>
-              <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5548999680600" target="_blank" rel="noopener noreferrer">
                 Solicitar Orçamento
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
@@ -184,7 +184,7 @@ export default function Estruturas() {
             Instalação de estrutura com a <span className="text-gradient">Eclipse</span>
           </h2>
           <Button variant="hero" size="xl" asChild>
-            <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5548999680600" target="_blank" rel="noopener noreferrer">
               Falar com Especialista
             </a>
           </Button>

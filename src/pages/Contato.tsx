@@ -18,15 +18,15 @@ const contactInfo = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    value: "(48) 98418-0377",
-    href: "https://wa.me/5548984180377",
+    value: "(48) 99968-0600",
+    href: "https://wa.me/5548999680600",
     description: "Resposta rápida",
   },
   {
     icon: Phone,
     title: "Telefone",
-    value: "(48) 98418-0377",
-    href: "tel:+5548984180377",
+    value: "(48) 99968-0600",
+    href: "tel:+5548999680600",
     description: "Seg a Sex, 8h às 18h",
   },
   {
@@ -72,7 +72,7 @@ export default function Contato() {
     // Create WhatsApp message
     const whatsappMessage = `*Contato via Site*%0A%0A*Nome:* ${formData.name}%0A*E-mail:* ${formData.email}%0A*Assunto:* ${formData.subject}%0A%0A*Mensagem:*%0A${formData.message}`;
     
-    window.open(`https://wa.me/5548984180377?text=${whatsappMessage}`, "_blank");
+    window.open(`https://wa.me/5548999680600?text=${whatsappMessage}`, "_blank");
 
     toast({
       title: "Redirecionando para o WhatsApp",
@@ -253,7 +253,7 @@ export default function Contato() {
             Chame no WhatsApp para uma resposta imediata. Nossa equipe está pronta para atendê-lo.
           </p>
           <Button variant="whatsapp" size="xl" asChild>
-            <a href="https://wa.me/5548984180377" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5548999680600" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-5 h-5 mr-2" />
               Chamar no WhatsApp
             </a>

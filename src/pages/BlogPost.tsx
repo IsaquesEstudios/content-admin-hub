@@ -204,7 +204,7 @@ export default function BlogPost() {
             </p>
             <Button variant="hero" size="lg" asChild>
               <a
-                href="https://wa.me/5548984180377"
+                href="https://wa.me/5548999680600"
                 target="_blank"
                 rel="noopener noreferrer"
               >

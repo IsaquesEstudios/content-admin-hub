@@ -135,14 +135,14 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="ghost" size="sm" asChild>
-              <a href="tel:+5548984180377">
+              <a href="tel:+5548999680600">
                 <Phone className="w-4 h-4 mr-2 text-eclipse-blue" />
-                (48) 98418-0377
+                (48) 99968-0600
               </a>
             </Button>
             <Button variant="whatsapp" size="sm" asChild>
               <a
-                href="https://wa.me/5548984180377"
+                href="https://wa.me/5548999680600"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -255,14 +255,14 @@ export function Header() {
 
             <div className="flex flex-col gap-2 pt-4 border-t border-border mt-2">
               <Button variant="outline" size="default" asChild>
-                <a href="tel:+5548984180377">
+                <a href="tel:+5548999680600">
                   <Phone className="w-4 h-4 mr-2 text-eclipse-blue" />
-                  (48) 98418-0377
+                  (48) 99968-0600
                 </a>
               </Button>
               <Button variant="whatsapp" size="default" asChild>
                 <a
-                  href="https://wa.me/5548984180377"
+                  href="https://wa.me/5548999680600"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

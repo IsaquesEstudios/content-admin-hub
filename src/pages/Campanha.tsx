@@ -8,7 +8,7 @@ const heroDesktop = "/images/campanha/comunicacao-visual.jpg";
 const heroMobile = "/images/campanha/comunicacao-visual-celular.jpg";
 const paineisLed = "/images/campanha/paineis-em-led.jpg";
 const comunicacao = "/images/campanha/comunicacao.jpg";
-const whatsappLink = "https://api.whatsapp.com/send?phone=554884180377&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20Pain%C3%A9is%20de%20LED.";
+const whatsappLink = "https://api.whatsapp.com/send?phone=5548999680600&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20Pain%C3%A9is%20de%20LED.";
 const processSteps = [{
   number: "1º",
   title: "Consulta Com Cliente",
